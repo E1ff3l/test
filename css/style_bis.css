@@ -1,0 +1,268 @@
+/*
+ * Restomalin - 2013
+ *
+ * Design : Guillaume Schaeffer
+ * www.guillaume-schaeffer.fr
+ *
+ * 2013-04-16 14:33 
+ *
+ */
+.conteneur_article {
+	position: relative;
+	margin-top: -25px;
+	margin-left: 250px;
+	width: 50px;
+	border: 0px solid blue;
+	display:none;
+}
+
+.gris {
+	color: #A8A8A8;
+}
+.depliable {
+	cursor: pointer;
+}
+.hilight {
+	background: yellow;
+}
+.wait {
+	display: none;
+}
+.clic {
+	cursor: pointer;
+}
+
+#liste-restos .ouverture-libre {
+	background:	url(../img/montre.gif) no-repeat left top;
+	padding : 0 0 0 20px;
+}
+#liste-restos a.lien-horaire {
+	/*padding: 7px 30px 7px 0;*/
+	display: inline-block;
+	text-decoration: underline;
+	/*width: 174px;*/	
+}
+
+.erreur {
+	color: #CC3300;
+}
+
+.succes {
+	color: green;
+}
+
+.btn-valider {
+	margin: 20px 0 10px 0;
+	width: 174px;
+	background : url(../img/double-fleche.png) no-repeat 174px 8px #bac805;
+}
+
+.btn-valider:hover,
+.btn-valider:focus {
+	background: url(../img/double-fleche.png) no-repeat 174px 8px #ccdb02;
+}
+
+.btn-valider:active {
+	background: url(../img/double-fleche.png) no-repeat 174px 8px #92aa03;
+}
+
+/* ------------------------------------------------ */
+
+.btn-valider {
+	display: block;
+	border : 1px solid #deee02;
+	border-radius: 4px;
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+	text-shadow : 0 2px 1px rgba(0, 0, 0, 0.2);
+	color : #fff;
+	padding: 4px 0 4px 10px;
+	background : url(../img/double-fleche.png) no-repeat 116px 8px #bac805;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.5), inset 0 -5px 5px rgba(144,165,1,0.9);
+	transition : box-shadow .3s, background .1s;
+}
+
+.btn-valider:hover {
+	outline: none;
+	box-shadow: 0 5px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.3), inset 0 -5px 5px rgba(144,165,1,0.7);
+}
+
+.btn-valider:active {
+	position: relative;
+	top: 1px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.8), inset 0 -5px 5px rgba(0,0,0,0.1);
+	background: url(../img/double-fleche.png) no-repeat 116px 8px #92aa03;
+}
+
+/* ------------------------------------------------ */
+.decale {
+	margin-top: 5px;
+}
+
+.titre_colonne_horaire {
+	float: left;
+	width: 70px;
+	height: 15px;
+	border: 0px solid blue;
+}
+
+.texte_colonne_horaire {
+	float: left;
+	width: 100px;
+	height: 15px;
+	border: 0px solid blue;
+}
+
+#nouveau-restaurant p.bottom {
+	margin-bottom: 5px;
+}
+
+.rating_etoile {
+	clear: both;
+	margin: 3px 0 2px 0;
+	width: 49px;
+}
+
+.etoile4 {
+	background: url(../img/rating-4.png) no-repeat center left;
+	width: 49px;
+	height: 9px;
+}
+
+
+/* ------------------------------------------------ */
+
+
+/* ------------------------------------------------ */
+/* ToolTips
+/* ------------------------------------------------ */
+
+.tooltip {
+	background: #fff;
+	border: 1px solid #efebe7;
+	padding : 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 8px rgba(0,0,0,.35);
+	color: #a8a8a8;
+}
+
+.tooltip ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	line-height: 15px;
+	padding-top: 10px;
+}
+
+.tooltip h3 {
+	padding-bottom:  10px;
+	border-bottom: 1px solid #ebebeb;
+}
+/* ------------------------------------------------ */
+
+
+
+/* ------------------------------------------------ */
+/* Zone de warning
+/* ------------------------------------------------ */
+.warning_gris {
+	color : #3C3C3C;
+	padding: 2px 0px;
+}
+
+.warning_f {
+	background: #df1818;
+	color : #fff;
+	font-weight: 700;
+	border-radius: 3px;
+	padding: 2px 0px 2px 10px;
+	margin-bottom: 10px;
+}
+
+.warning_f h2, .warning_f h3 {
+	font-size: 16px;
+	line-height: 20px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	color: #fff;
+}
+
+.warning_f {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/* ------------------------------------------------ */
+/* Menus
+/* ------------------------------------------------ */
+.conteneur_menu {
+	padding-left: 		5px;
+	margin-bottom:		5px;
+	background-color: 	#F4F3F0;
+	border-radius: 		3px;
+	border:				1px solid #E2E1DD;
+}
+
+.conteneur_menu:hover {
+	background-color: 	#E2E1DD;
+}
+
+.conteneur_menu_fidelite {
+	padding-left: 		5px;
+	margin-bottom:		5px;
+	background-color: 	#E2E1DD;
+	border-radius: 		3px;
+	border:				1px solid #C5C805;
+}
+
+.conteneur_menu_fidelite:hover {
+	background-color: 	#F4F3F0;
+}
+
+.style_menu_fidelite {
+	clear: 				both;
+	padding : 			10px;
+	margin-bottom: 		10px;
+	background-color: 	#FFF;
+	border-radius: 		3px;
+	border:				1px solid #EFEBE7;
+}
+
+
+/* ------------------------------------------------ */
+/* SiteMap
+/* ------------------------------------------------ */
+#sitemap p.h1, #sitemap p.h2, #sitemap p.h3, #sitemap p.h4, #sitemap p.h5, #sitemap p.h6, #sitemap h1 {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #3c3c3c;
+}
+
+#sitemap h1 {
+	font-size: 17px;
+	text-align: left;
+	text-shadow: none;
+	padding-top: 0px;
+	margin: .5em 0;
+}
+
+#sitemap p.h1 {
+	font-size: 23px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 2px 4px #000;
+	padding-top: 15px;
+}
+
+#sitemap a {
+	text-decoration: underline;
+	transition : color .3s, text-decoration .3s;
+	color : #a8a8A8;
+}
+
+#sitemap a:hover, .supprimer:hover {
+	color: #3c3c3c;
+	text-decoration: underline;
+}

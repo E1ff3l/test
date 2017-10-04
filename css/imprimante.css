@@ -1,0 +1,38 @@
+* {
+	margin : 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Trebuchet MS", Myriad, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+table {
+	border-collapse:collapse;
+	border: 1px solid black;
+	width: 100%;
+	height: 40px;
+}
+
+td, th {
+	border: 1px solid black;
+	height: 40px;
+}
+
+.designation, .prix-unit, .qte, .sstotal {
+	width: 25%;
+}
+
+.entete-grand-total {
+	width: 75%;
+	text-align: left;
+}
+
+.grand-total, .prix-unit, .qte, .sstotal {
+	text-align: center;
+}
+
+.designation {
+	text-align: left;
+}

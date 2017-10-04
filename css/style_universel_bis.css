@@ -1,0 +1,24 @@
+.contour {
+	padding:			0px 10px;
+	margin-bottom:		7px;
+	background-color:	#F9F9F9;
+	border-radius: 		5px;
+	min-height:			200px;
+	border: 			1px solid #E7E7E7;
+}
+.contour img {
+	border-radius: 		5px;
+}
+.m-left {
+	margin-left:		7px;
+}
+.no-padding {
+	padding:			0px;
+}
+.wait {
+	display: 			none;
+}
+
+.label_mode_fonctionnement {
+	color: 				#FFFFFF;
+}

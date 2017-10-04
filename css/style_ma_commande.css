@@ -1,0 +1,226 @@
+body {
+  	padding: 0;
+  	margin:0;
+  	}
+
+
+.clear {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    width: 100%;
+}
+.clear {clear: both;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite,  del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {	margin:0px; 
+	padding:0px; 
+	border:0px; 
+	border-collapse:separate; 
+	border-spacing:0px;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	text-decoration:none;
+}
+
+li {
+	color: #FFFFFF;
+}
+
+.ul_rm {
+	color: #FFFFFF;
+	
+}
+
+.ul_rm li {
+	float: left;
+	width: 33%;
+	list-style-type : none;
+}
+/*a {color: #DB7093; text-decoration: none; }
+a:visited {color:#DB7093;}
+a:hover {color: #564b47;}
+a:active { color:#000000; text-decoration: line-through;}
+
+
+h1 { font-size : 1.8em; }
+h3 { font-size : 1.3em; }
+pre, code{ font-size: 1.3em;}
+*/
+
+#sidebar {
+	width:220px; /* 280 - 60*/
+	height:100%;	
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:10;
+	font:13px/18px Arial, Helvetica, sans-serif;
+	color:#444;
+	background-color:#fff;
+	padding:30px;
+}
+
+#content {
+	width:650px;
+	height:100%;	
+	position:absolute;
+	left:280px;
+	top:0;
+	z-index:8;
+	font:13px/18px Arial, Helvetica, sans-serif;
+	color:#444;
+	padding:30px;
+	background:rgb(0,0,0);
+    background:rgba(0,0,0,.55);
+    *background:transparent;
+    *filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#BF000000,endColorStr=#BF000000);
+    *-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000)";
+	
+}
+
+#content p{
+line-height: 1.6em;
+padding: 0 15px 0 0;
+margin:0 0 15px;
+color:#fff;
+}
+
+img.bg-theme {
+    position:fixed;
+    width:2000px;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+
+/* ---(( MENU ))------------------------------- */
+
+nav {margin-top:30px;}
+
+nav>ul {padding:0;}
+
+nav>ul>li{
+	display:block;
+	clear:both;
+}
+
+nav>ul>li>a{
+	font:22px/25px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	float:left;
+	width:220px;
+}
+
+
+nav>ul>li a:hover{
+	background:url(../images/fleche-afrique.png) right center no-repeat;
+	color:#FC0;
+}
+
+/* ----------------------------------------- */
+
+
+#coordonnees {margin-top:30px;}
+
+.coordonneesH1 {
+	text-transform:uppercase;
+	color:#FC0;
+	font-size : 1em;
+	font-weight:bold;
+}
+
+#coordonnees p {margin-bottom:10px;}
+
+
+/* ----------------------------------------- */
+
+.restomalin {
+	position:fixed;
+	bottom:10px;
+	background:url(../images/elephant-afrique.png) top left repeat-x;
+	font-size : 0.8em;
+	text-transform:uppercase;
+	padding-top:25px;
+	}
+	
+.restomalin a {color:#AAA;}
+.restomalin a:hover {color:#46A746;}
+
+
+/* ----------------------------------------- */
+
+
+#blocTitreResto {margin:20px 0 50px 0;}
+
+.blocTitreRestoH1 {
+	text-transform:uppercase;
+	color:#fff;
+	font-size : 2em;
+	border-bottom:1px dotted #ccc;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+.slogan {
+	font-family: 'Great Vibes', cursive;
+	font-size : 4em;
+}
+
+.menu {
+  padding:5px;
+  font-family: arial, helvetica, sans-serif;
+	font-size : 18px;
+	font-weight : bold;
+}
+
+
+
+/* ----------------------------------------- */
+
+
+#presentationResto h1 {
+	text-transform:uppercase;
+	color:#fff;
+	font-size : 1.5em;
+	background:#5C005A;
+	padding:5px;
+	margin-bottom:20px;
+}
+
+#presentationResto img {
+	border:3px solid #fff;
+	margin:10px 20px 20px 0;
+}
+
+/* ----------------------------------------- */
+
+.boutonMenuATelecharger a {
+display:block;
+width:265px;
+height:61px;
+background:url(../images/bouton-menu.png) no-repeat;
+float:left;
+margin:10px;
+text-indent: -9999px;
+}
+.boutonMenuATelecharger a:hover {
+background:url(../images/bouton-menu-hover.png) no-repeat;
+}
+
+.boutonCommandeEnLigne a {
+display:block;
+width:265px;
+height:121px;
+background:url(../images/bouton_je_commande_CB.jpg) no-repeat;
+float:left;
+margin:-15px;
+text-indent: -9999px;
+}
+.boutonCommandeEnLigne a:hover {
+background:url(../images/bouton_je_commande_CB_hover.jpg) no-repeat;
+}

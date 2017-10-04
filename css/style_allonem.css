@@ -1,0 +1,1551 @@
+/*
+ * Restomalin - 2013
+ *
+ * Design : Guillaume Schaeffer
+ * www.guillaume-schaeffer.fr
+ *
+ * 2013-08-13
+ *
+ */
+
+* {
+	margin : 0;
+	padding: 0;
+}
+
+body {
+	/*background: url(../img/grad-bruit-beige.jpg) repeat-x 0 29px #fff;*/
+	background: url(../img/pattern_cuisine.jpg);
+	background-repeat: repeat;
+	font-family: "Trebuchet MS", Myriad, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#page {
+	/*version fixée
+	padding-top: 30px;*/
+}
+
+.clearfix {
+	height : 0px;
+	clear: both;
+	display: block;
+}
+
+.inner {
+	width : 940px;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+.inner2 {
+	width : 940px;
+	margin-left : auto;
+	margin-right : auto;
+	font-size: 15px;
+	font-family: "trebuchet MS";
+}
+
+del {
+	color: #a8a8a8;
+}
+
+hr {
+	border : 0;
+	background : #efebe7;
+	color : #efebe7;
+	height: 1px;
+}
+
+hr.double {
+	margin-top: 10px;
+	border-top: 1px solid #e7e0c9;
+	border-bottom: 1px solid #fff;
+}
+
+.left-separator {
+	border-left : 1px solid #e7e0c9;
+	padding-left: 9px;
+}
+
+.right-separator {
+	border-right : 1px solid #fff;
+	padding-right: 9px;
+}
+
+.alpha {
+	margin-left: 20px;
+}
+
+.omega {
+	margin : 0;
+}
+
+/*-- Styles communs titres --*/
+h1, h2, h3, h4, h5, h6, .h1 {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #3c3c3c;
+}
+
+h1 {
+	font-size: 23px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 2px 4px #000;
+	padding-top: 0px;
+}
+
+.h1 {
+	font-size: 23px;
+	color: #fff;
+	text-shadow: 0 2px 4px #000;
+	padding-top: 15px;
+}
+
+h6 {
+	font-size: 12px;
+	font-family: "Trebuchet MS";
+	text-transform: none;
+}
+
+/*-- Styles communs liens --*/
+
+a {
+	text-decoration: none;
+	transition : color .3s, text-decoration .3s;
+	color : #a8a8A8;
+}
+
+
+a img {border : none;}
+
+
+li a:hover, li a:focus, li a:active, 
+#col-gauche dl a:hover, #col-gauche dl a:focus, #col-gauche dl a:active, 
+#breadcrumbs a:hover, #breadcrumbs a:focus, #breadcrumbs a:active {
+	color: #3c3c3c;
+	text-decoration: underline;
+}
+
+/* --  Bandeau liens utiles -- */
+
+#liens-utiles {
+	/* version fixée */
+	/*position: fixed;
+	z-index : 1000;
+	width: 100%;*/
+	/*-----*/
+	/*background : url(../img/fond-bruit-noir.gif) #000;*/
+	background: #C0C0C0;
+	/*border-bottom : 1px solid #3c3c3c;*/
+	border-bottom : 1px solid #AA0000;
+	font-size: 13px;
+	color : #fff;
+	height: 29px;
+	text-shadow: 0 2px 1px #C0C0C0;
+}
+
+#liens-utiles a {
+	color : #fff;
+	font-weight: 400;
+}
+
+#liens-utiles a:hover, #liens-utiles a:focus, #liens-utiles a:active {
+	text-decoration: underline;
+}
+
+#liens-utiles p {
+	float: left;
+	padding-top : 6px;
+}
+
+#liens-utiles ul {
+	float: right;
+	padding-top : 6px;
+}
+
+#liens-utiles li {
+	display: inline-block;
+}
+
+#liens-utiles li:after {
+	content: " | ";
+	color: #808080;
+}
+
+#liens-utiles li:last-child:after { 
+	content: none;
+}
+
+/* -- Header -- */
+
+#logo {
+	 margin: 20px 0 30px 0;
+}
+
+#header {
+	background: url(../img/ombre-top.gif) bottom center no-repeat;
+}
+
+
+/* -- caroussel atouts -- */	
+
+/* styles du slide dans anythingslider.css */
+
+#ph-atouts {
+	margin-top:20px;
+	float: right;
+	background: #fff;
+	border-radius: 10px;
+}
+
+
+/* -- Fil d'ariane / breadcrumbs -- */
+#breadcrumbs {
+	color : #a8a8A8;
+}
+
+#breadcrumbs div {
+	display :inline-block;
+	margin: 10px 3px 10px 0;
+}
+
+/* -- Moteur de recherche -- */
+#search-engine {
+	float: right;
+	margin: 6px 0 0 0;
+}
+
+#search-engine #field {
+	text-align: left;
+	padding-left: 10px;
+	color : #ccc;
+	height: 20px;
+	border : 1px solid #efebe7;
+	box-shadow: inset 0 1px 4px rgba(0,0,0,0.2);
+	width: 135px;
+}
+
+#search-engine #field:hover {
+	border: 1px solid #bac805;
+	box-shadow:  0 0 4px #bac805;
+}
+
+#search-engine #field:focus {
+	color: #333;
+	border: 1px solid #bac805;
+	box-shadow:  0 0 4px #bac805;
+}
+
+#search-engine #rechercher {
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	font-family: "Fjalla One", sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #a8a8a8;
+	border : 1px solid #efebe7;
+	padding: 1px;
+	width: 60px;
+	margin: 0 0 0 10px;
+}
+
+#search-engine #rechercher:hover,
+#search-engine #rechercher:focus {
+	border-color: #a8a8a8;
+}
+
+#search-engine #rechercher:active {
+	box-shadow: 0 0 2px rgba(0,0,0,0.1);
+	position: relative;
+	top: 1px;
+}
+
+
+
+/* --  Colonne de gauche -- */
+#col-gauche {
+	float: left;
+	width: 220px;
+}
+
+#col-gauche h4 {
+	font-family: "Trebuchet MS", Myriad, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-transform: none;
+	color: #888;	
+}
+
+#col-gauche  p+h4 {
+	padding-top: 10px;
+}
+
+#col-gauche .bloc-recap {
+	background: #bac805; 
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+	padding: 2px 10px 2px 10px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	border-radius: 4px;x
+}
+
+p.carrevert {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: none;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	
+}
+
+p.formules {
+  font-family: "Fjalla One",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #3C3C3C;
+  font-size: 14px;
+
+}
+
+#contenu-menu {
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-family: "Fjalla One",sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+p.nom_menu {
+  font-family: "Fjalla One",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 13px;
+
+}
+.col-bloc {
+	clear: both;
+	background: #fff;
+	border: 1px solid #efebe7;
+	padding : 10px;
+	margin-bottom: 10px;
+}
+
+.col-bloc form {
+	line-height: 20px;
+	color: #a8a8a8;
+}
+
+.col-bloc label {
+	margin-left: 5px;
+}
+
+#col-gauche hr {
+	margin : 12px 0 8px 0;
+}
+
+#col-gauche ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	line-height: 15px;
+}
+
+#col-gauche li {
+	color: #a8a8a8;
+}
+
+
+.changerquartier {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #3c3c3c;
+}
+
+a#retour-liste {
+	display: inline-block;
+	padding: 5px 0;
+	color: #a8a8a8;
+	width: 210px;
+	border-radius: 4px;
+	padding : 2px 5px;
+	margin-top: 5px;
+	text-decoration: underline;
+}
+
+a#retour-liste:hover, 
+a#retour-liste:focus, 
+a#retour-liste:active  {
+	color: #333;
+	transition : color .3s;
+
+}
+
+
+div#radios {
+	margin : 10px auto 5px auto;
+	width: 220px;
+}
+
+#radios div {
+	width: 100px;
+	padding : 2px 0 10px 0;
+	color: #a8a8a8;
+	float: left;
+}
+
+#livraison {
+	text-align: left;
+}
+
+#emport {
+	text-align: right;
+}
+
+a#retour-liste:before {
+	/*content: "\2190";*/
+}
+
+#style-plats {
+	overflow: auto;
+	/*padding-bottom: 10px;*/
+	padding: 0 0 10px 0;
+}
+
+#style-plats a {
+	position: relative;
+	text-decoration: none;
+}
+
+#style-plats div {
+	width: 60px;
+	float: left;
+	/*margin: 0 10px 10px 0;*/
+	margin: 0 8px 10px 0;
+
+	/*padding: 10px 0;*/
+	border : none;
+	clear: none;
+}
+
+#style-plats .alpha {
+	margin-left : 10px;
+	clear:both;
+}
+
+#style-plats h6 {
+	text-align: center;
+	padding: 1px 0;
+
+}
+
+
+#style-plats a.actif h6 {
+	color: #fff;
+	font-weight: 700;
+	background: #bac805;
+	border-radius: 4px;
+}
+
+#style-plats a:hover h6{
+	color: #fff;
+	background: #bac805;
+	border-radius: 4px;
+}
+
+
+#changer-quartier {
+	margin : 10px 0 20px 0;
+}
+
+#changer-quartier p {
+	background: url(../img/puce-sidebar.gif) center left no-repeat;
+	padding: 0 0 0 12px;
+	line-height: 15px;
+}
+
+#changer-quartier p a {
+	font-weight: 700;
+}
+
+#changer-quartier .ChangeQuartier {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+}
+
+.AutresRestos {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000;
+	text-transform: uppercase;
+}
+
+
+dl {
+	position: relative;
+	color : #a8a8a8;
+}
+
+dd {
+	position: relative;
+	border-bottom: 1px dotted #a8a8a8;
+	clear: both;
+	margin-bottom: 2px;
+	min-height: 0;
+}
+
+dt {
+	background: #fff;
+	padding: 1px 0 1px 5px;
+	position: absolute;
+	bottom: -4px;
+	right: -1px;
+	z-index: 99;
+}
+
+dt em {
+	color: #bac805;
+}
+
+dd span {
+	margin: 0 ;
+	position: relative;
+	top: 4px;
+	padding: 0 5px 0 0;
+	background: #fff;
+}
+
+/* --  Colonne centrale -- */
+#contenu-central p {
+	color: #a8a8a8;
+	margin-bottom: 10px
+}
+
+#contenu-h1 p {
+	color: #a8a8a8;
+	margin-bottom: 10px
+}
+
+#col-centrale {
+	float: left;
+	width: 462px;
+	margin: 0 0 0 19px;
+}
+
+#col-centrale-iframe {
+	float: left;
+	width: 462px;
+}
+
+#col-centrale ul, #col-centrale-iframe ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	color: #a8a8a8;
+}
+
+.warning {
+	background: #df1818;
+	color : #fff;
+	font-weight: 700;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.warning a {
+	color : #fff;
+	text-decoration: underline;
+}
+
+.warning a:hover {
+	text-decoration: none;
+}
+
+.warning h2, .warning h3 {
+	font-size: 16px;
+	line-height: 20px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	color: #fff;
+}
+
+.attention {
+	font-size: 16px;
+	line-height: 20px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	color: #fff;	
+}
+
+#resto .warning {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.notice {
+	color: #df1818;
+	font-weight: 300;
+}
+
+.notice-important {
+	color: #df1818;
+	font-weight: 700;
+}
+
+
+#contenu-central {
+	background: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: 0 1px 16px rgba(0,0,0,.16);
+}
+
+#col-centrale h1, #col-centrale-iframe h1, .h1 {
+	text-align: left;
+	margin-top: 0;
+	font-size: 20px;
+	min-width: 250px;
+	line-height: 20px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	color: #fff;
+}
+
+#col-centrale hr, #col-centrale-iframe hr {
+	margin: 10px 0;
+}
+
+#contenu-h1 {
+	background: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: 0 1px 16px rgba(0,0,0,.16);
+	text-shadow: none;
+	margin-top:0px;
+	/*padding:10px 0px 10px 5px;*/
+	padding:10px 0px 10px 5px;
+}
+
+#contenu-h2 {
+	text-align: center;	
+}
+
+#contenu-h1 h1 {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: none;
+	color: #3c3c3c;
+	font-size: 15px;
+	text-align: center;
+}
+
+.ph-infos {
+	float: left;
+	max-width: 280px;
+}
+
+.ph-infos h1, .h1 {
+	float: none;
+	padding-top: 10px;
+}
+
+.ph-infos .thematiques-resto {
+	color: #a8a8a8;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family: "Fjalla One", sans-serif;
+	line-height: 20px;
+	padding-top: 5px;
+}
+
+.note-avis {
+	color: #fc0;
+}
+
+.logo-resto {
+	float: left;
+	padding : 10px 10px 0 10px;
+}
+
+.logo-resto img {
+	border: 1px solid #9c886d;
+	box-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+
+#coup-de-coeur {
+	height: 220px;
+	background: url(../img/entete-pizza.jpg) no-repeat top left;
+	border: 1px solid #ebebeb;
+	box-shadow: 0 1px 16px rgba(0,0,0,.16);
+	position: relative;
+}
+
+#coup-de-coeur .logo-resto {
+	position: absolute;
+}
+
+#coup-de-coeur .ph-infos {
+	margin-left: 120px;
+	padding-bottom: 10px;
+}
+
+#coup-de-coeur img.rating {
+	clear: none;
+	margin: 0;
+}
+
+#entete-infos {
+	min-height: 76px;
+	height: auto;
+	background : rgba(0,0,0,.65);
+}
+
+.coup-de-coeur-titre {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color : #fff;
+	font-size: 18px;
+	padding: 7px 0 7px 10px;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	background: url(../img/fond-selection-zoom.gif) repeat-x bottom #bac805;
+	position: absolute;
+	bottom: 0px;
+	width: 450px;
+}
+
+
+/* -- tri liste resto-- */
+#tri {
+	margin: 10px 0 15px 0;
+	font-family: "Fjalla One", sans-serif;
+	text-transform: uppercase;
+	color: #a8a8a8;
+	min-height: 25px;
+}
+
+#tri p {
+	float: left;
+	padding: 5px 10px 5px 0;
+}
+
+#tri select {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #a8a8a8;
+	background: transparent;
+
+	border: none;
+	width: 90px;
+	padding: 5px 0;
+	-webkit-appearance: none;
+}
+
+#min-commande select{ 
+	width: 162px;
+}
+
+#min-commande {
+	width: 145px;
+
+}
+
+#tri select:focus {
+	color: #bac805;
+}
+
+.styled-select {
+	float: left;
+	margin : 0 10px 0 0;
+	width: 55px;
+	overflow: hidden;
+	background: url(../img/select-style.gif) no-repeat center right #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2)
+}
+
+/* -- tooltip général -- */
+
+.tooltip-general {
+	background: #fff;
+	/*border: 1px solid #efebe7;*/
+	border: 1px solid #3c3c3c;
+	border-radius: 3px;
+	padding : 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 8px rgba(0,0,0,.35);
+	color: #a8a8a8;
+}
+
+.tooltip-general ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	line-height: 15px;
+	padding-top: 10px;
+}
+
+.tooltip-general h3 {
+	padding-bottom:  10px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+/* -- tooltip paiement -- */
+
+#tooltip-paiement {
+	background: #fff;
+	/*border: 1px solid #efebe7;*/
+	border: 1px solid #3c3c3c;
+	padding : 10px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 8px rgba(0,0,0,.35);
+	color: #a8a8a8;
+}
+
+#tooltip-paiement ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	line-height: 15px;
+	padding-top: 10px;
+}
+
+#tooltip-paiement h3 {
+	padding-bottom:  10px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+/* -- pagination liste restos -- */
+.pagination {
+	clear: both;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 2px;	
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px 0;
+	margin : 0 10px;
+}
+
+.pagination li {
+	display: inline-block;
+	border-left: 1px solid #a8a8a8;
+	padding: 0 5px;
+}
+
+li.previous-page, 
+li.next-page,
+li.first-page,
+li.last-page {
+	border: none;
+}
+
+li:first-child +li + li {
+	border: none;
+}
+
+ a.actif {
+	color: #bac805;
+	text-decoration: underline;
+}
+
+
+.previous-page span,
+.next-page span {
+	display: none;
+}
+
+.pagination li.previous-page a,
+.pagination li.next-page a {
+	position: relative;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	line-height: 0;
+	padding : 0 10px;
+}
+
+.pagination li.previous-page {
+	background: url(../img/previous-page.gif) no-repeat center;
+}
+
+.pagination li.next-page {
+	background: url(../img/next-page.gif) no-repeat center;
+}
+
+#pagination-haut {
+	border-bottom : 1px solid #efebe7;
+
+}
+
+
+/* -- liste restos -- */
+#liste-restos .c100 {
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+#liste-restos .logo-resto {
+	float: none;
+	padding:0;
+}
+
+.c100 p.note-avis {
+	margin-top: 5px;
+	margin-left: -7px;
+	text-align: center;
+}
+
+#liste-restos .c300 {
+	width: 330px;
+	position: relative;
+	z-index: 10;
+	padding-top: 0px;
+	margin-left: 120px;
+}
+
+#resto {
+	margin: 20px 10px 0 10px;
+	clear:  both;
+	border-bottom : 1px solid #efebe7;
+}
+
+#liste-restos .thematiques-resto {
+	color: #a8a8a8;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family: "Fjalla One", sans-serif;
+	line-height: 15px;
+	padding-top: 0px;
+}
+
+#liste-restos #new {
+	float: right;
+	height: 78px;
+	width: 79px;
+	background: url(../img/bandeau-nouveau.png) no-repeat top right;
+	margin-top : -2px;
+	margin-right: -3px; 
+}
+
+#new span {
+	display: none;
+} 
+
+#liste-restos ul {
+	line-height: 15px;
+}
+
+#liste-restos h2 {
+	font-size: 22px;
+}
+
+#liste-restos .ouverture {
+	background:	url(../img/montre.gif) no-repeat center left;
+	padding : 0 0 0 20px;
+}
+
+#liste-restos a.lien-moyens-paiement {
+	background: url(../img/moyens-paiement.gif) no-repeat center right;
+	padding: 7px 30px 7px 0;
+	display: inline-block;
+	/*width: 174px;*/	
+}
+
+.ph-boutons {
+	overflow: auto;
+	padding-bottom: 20px;
+}
+/* -- -- */
+	
+.contenu-onglet {
+	clear: both;
+	padding: 15px 10px 10px 10px;
+}
+
+.contenu-onglet h2 {
+	color: #3c3c3c;
+	margin-bottom: 8px;
+	padding: 0;
+}
+
+.contenu-onglet a {
+	font-weight: 700;
+	color: #bac805;
+}	
+
+.contenu-onglet a.normal {
+	font-weight: 500;
+}
+.contenu-onglet a.lien_categorie {
+	color: #A8A8B6;
+}
+.contenu-onglet a.lien_categorie:hover {
+	color: #3c3c3c;
+	text-decoration: underline;
+}
+
+/* -- Boutons -- */
+.btn-ajouter, 
+#btn-valider,
+#liste-restos a.btn-suite,
+#carte a.btn-visualiser {
+	display: block;
+	border : 1px solid #deee02;
+	border-radius: 4px;
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+	text-shadow : 0 2px 1px rgba(0, 0, 0, 0.2);
+	color : #fff;
+	padding: 4px 0 4px 10px;
+	width: 142px;
+	background : url(../img/double-fleche.png) no-repeat 116px 8px #bac805;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.5), inset 0 -5px 5px rgba(144,165,1,0.9);
+	transition : box-shadow .3s, background .1s;
+}
+
+.btn-ajouter {
+	position: relative;
+	bottom: 0;
+	margin-left: 294px;
+}
+
+.btn-ajouter:hover,
+.btn-ajouter:focus,
+#btn-valider:hover, 
+#btn-valider:focus,
+#liste-restos .btn-suite:hover, 
+#liste-restos .btn-suite:focus {
+	outline: none;
+	box-shadow: 0 5px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.3), inset 0 -5px 5px rgba(144,165,1,0.7);
+}
+
+.btn-ajouter:active,
+#liste-restos .btn-suite:active, 
+#btn-valider:active {
+	position: relative;
+	top: 1px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.8), inset 0 -5px 5px rgba(0,0,0,0.1);
+	background: url(../img/double-fleche.png) no-repeat 116px 8px #92aa03;
+}
+
+a.btn-comp {
+	display: block;
+	border : 1px solid #9b8f7f;
+	border-radius: 4px;
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: left;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	padding: 4px 0 4px 10px;
+	width: 190px;
+	margin : 0 auto 10px auto;
+	background : url(../img/double-fleche.png) no-repeat 174px 8px #806a4d;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3), inset 0 0 6px rgba(0,0,0,0.2);
+	transition : box-shadow .3s, background .1s;
+}
+
+.btn-retour {
+	display: block;
+	border : 1px solid #deee02;
+	border-radius: 4px;
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+	text-shadow : 0 2px 1px rgba(0, 0, 0, 0.2);
+	color : #fff;
+	padding: 4px 0 4px 26px;
+	width: 192px;
+	background : url(../img/double-fleche-retour.png) no-repeat 6px 8px #bac805;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.5), inset 0 -5px 5px rgba(144,165,1,0.9);
+	transition : box-shadow .3s, background .1s;
+	margin: 10px 0 10px 184px;
+}
+
+
+.btn-retour:hover,
+.btn-retour:focus {
+	outline: none;
+	box-shadow: 0 5px 3px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.3), inset 0 -5px 5px rgba(144,165,1,0.7);
+}
+
+.btn-retour:active {
+	position: relative;
+	top: 1px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3), inset 0 0 2px rgba(0,0,0,0.8), inset 0 -5px 5px rgba(0,0,0,0.1);
+	background-color : #92aa03;
+}
+
+#coup-de-coeur .btn-comp, 
+#liste-restos a.btn-comp {
+	font-size: 14px;
+	padding: 4px 0 4px 5px;
+	width: 95px;
+	margin : 5px auto;
+	background : url(../img/double-fleche.png) no-repeat 78px 7px #806a4d;
+	transition : box-shadow .3s, background .1s;
+}
+
+#liste-restos a.btn-comp {
+	float: left;
+	width: 142px;
+	background : url(../img/double-fleche.png) no-repeat 116px 7px #806a4d;
+	margin: 0;
+}
+
+#liste-restos a.btn-suite {
+	float: left;
+	margin-right: 20px;
+}
+
+ #carte a.btn-visualiser {
+	/*float: right;*/
+	/*margin-bottom: 20px;*/
+	margin-left: 282px;
+}
+
+/* --  Colonne centrale, infos pratiques -- */
+#infos .column {
+	width: 200px;
+	float: left;
+	margin-right : 20px;
+}
+
+.MotDuPatron {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+}
+
+.HorairesOuverture {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+}
+
+.LivraisonReglement {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.MoyensPaiement {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.VotreQuartier, .NotesEtAvis, .BonsPlans {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+	color: #3C3C3C;
+	text-transform: uppercase;
+}
+
+.SuggererResto {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #937F69;
+	text-transform: uppercase;
+	
+}
+	
+/* --  Contenu -- */
+
+#col-unique-contenu h2, #col-unique-contenu h3 {
+	margin: .5em 0; 
+}
+
+#col-unique-contenu li {
+	list-style-position: inside;
+}
+
+.col-2 {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+}
+
+.col-3 {
+	width: 31%;
+	float: left;
+	margin-right: 2%;
+
+}
+
+.col-4 {
+	width: 23%;
+	float: left;
+	margin-right: 2%;
+}
+
+
+/* --  Colonne de droite -- */
+#col-droite {
+	float: left;
+	width: 220px;
+	margin-left: 19px;
+}
+
+/*-- Autres restos du quartier et billets de blog --*/
+
+#autres-restos-quartier {
+	margin-top: 10px; 
+	background: #fff;
+	border: 1px solid #ebebeb;
+	padding : 10px;
+}
+
+.col-bloc div {
+	/*padding: 10px 0;*/
+	border-top: 1px solid #ebebeb;
+	clear: both;
+}
+
+.billet div {
+	padding-bottom: 0;
+}
+
+.colbloc {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #3c3c3c;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+#autres-restos-quartier h3 {
+	line-height: 20px;
+	text-transform: none;
+	font-size: 16px;
+	float: left;
+	width: 200px;
+}
+
+img.vignette {
+	float: right;
+	padding : 3px 0 10px 10px;
+}
+
+.billet img.vignette {
+	float: left;
+	padding : 3px 10px 0 0;
+}
+
+#col-droite .categories-plats {
+	width: 70px;
+	clear: right;
+	float: right;
+	padding: 0 0 7px 0;
+	border: none;
+	font-size: 90%;
+}
+
+#col-droite .categories-plats ul {
+	list-style-image: url(../img/puce-sidebar.gif);
+	list-style-position: inside;
+	/*list-style: none;*/
+}
+
+#col-droite .categories-plats li {
+	color: #a8a8a8;
+}
+
+#col-droite .categories-plats p.maxlist-more {
+/*	margin: 0;
+	padding: 0;*/
+	background: url(../img/puce-sidebar.gif) center left no-repeat;
+	padding: 0 0 0 12px;
+	line-height: 15px;
+}
+
+
+#autres-restos-quartier p, 
+.billet p {
+	color: #a8a8a8;
+	padding: 5px 0 0 0;
+	margin-bottom: 0;
+}
+
+
+#autres-restos-quartier p {
+	width: 120px;
+}
+
+#autres-restos-quartier p a, 
+.bloc-discret p a,
+.bloc-discret2 p a  {
+	display: inline-block;
+	padding-top: 5px;
+}
+
+a.suite-action,
+a.lien-supplements {
+	color: #bac805;
+	font-weight: 700;
+}
+
+a.suite-action:hover,
+a.suite-action:focus,
+a.suite-action:active,
+a.lien-supplements:hover,
+a.lien-supplements:focus,
+a.lien-supplements:active,
+#autres-restos-quartier p a:hover, 
+#autres-restos-quartier p a:focus, 
+#autres-restos-quartier p a:active,
+.bloc-avis a:hover, 
+.bloc-avis a:focus,
+.bloc-avis a:active
+{
+	text-decoration: underline;
+}
+
+#autres-restos-quartier .voir-tout a{
+	float: none;
+	text-transform: uppercase;
+	font-family: "Fjalla One",sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	color: #000;
+	background: url(../img/double-fleche-grise.gif) no-repeat center left;
+	padding-left: 15px;
+	margin-top: 8px;
+}
+
+
+#autres-restos-quartier h3 a {
+	color: #3c3c3c;
+}
+
+#autres-restos-quartier h4,
+h4.date,
+h4.thematique {
+	color: #a8a8a8;
+}
+
+img.rating {
+	clear: both;
+	margin: 3px 0 2px 0;
+}
+
+#col-droite hr {
+	clear: both;
+}
+
+.bloc-discret,
+.bloc-discret2 {
+	margin-top: 10px;
+}
+
+.bloc-discret img, .bloc-discret2 img {
+	float: left;
+	padding-right: 10px;
+}
+
+.bloc-discret p,
+.bloc-discret h3, 
+.bloc-discret a,
+.bloc-discret2 p, .bloc-discret2 h3, .bloc-discret2 a {
+	color: #937f69;
+}
+
+.bloc-discret h3, .bloc-discret2 h3 {
+	text-shadow: 0 1px 1px #fff;
+}
+
+.bloc-discret p {
+	padding-top: 10px;
+	min-height: 67px;
+}
+
+.bloc-discret2 p {
+	padding: 5px 0px;
+}
+
+.bloc-discret p a, .bloc-discret2 p a {
+	color: #937f69;
+	font-weight: 700;
+}
+
+.bloc-discret a:hover, 
+.bloc-discret a:focus, 
+.bloc-discret a:active,
+.bloc-discret2 a:hover, .bloc-discret2 a:focus, .bloc-discret2 a:active {
+	text-decoration: underline;
+}
+
+#col-droite .bloc-discret2 p.maxlist-more {
+	float:left;
+	margin-bottom: 10px;
+	width: 220px;
+	height: 15px;
+	border: 0px solid blue;
+}
+
+.bloc-discret h3 a:after, .bloc-discret2 h3 a:after {
+	content: " ››";
+}
+
+.bloc-discret ul {
+	list-style-image: url(../img/puce-discrete.gif);
+	list-style-position: inside;
+}
+
+.bloc-discret2 ul li {
+	float: left; 
+	margin: 5px 0px; 
+	width: 55px; 
+}
+
+.div_resto_droite {
+	width:220px; 
+	min-height:55px; 
+	border: 0px solid blue;
+}
+
+.ul_resto_droite {
+	list-style-type: none;
+}
+
+
+/* --  Pré-footer -- */
+
+#big-footer {
+	background: url(../img/fond-bigfoot.gif) repeat-x top left #937f69;
+	color : #fff;
+	padding-top: 20px;
+	margin-top : 40px;
+	padding-bottom: 10px;
+}
+
+#atouts .h3 {
+	font-family: "Fjalla One", sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #fff;
+}
+
+#atouts h3 {
+	font-size: 16px;
+	color: #fff;
+}
+
+#atouts p.bottom {
+	margin-bottom: 20px;
+}
+
+#atouts img {
+	margin-top: 10px;
+}
+
+#big-footer .column {
+	width: 220px;
+	float: left;
+	margin-left : 20px;
+}
+
+#big-footer .h2 {
+	font-family: "Montserrat", Verdana, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color:  #fff;
+	text-shadow : 0 2px 1px rgba(0, 0, 0, 0.2);
+	text-transform: none;
+}
+
+#big-footer h3 {
+	font-family: "Montserrat", Verdana, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color:  #fff;
+	text-shadow : 0 2px 1px rgba(0, 0, 0, 0.2);
+	text-transform: none;
+}
+
+#big-footer  .first-col {
+	margin-left : 0px;
+}
+
+#big-footer ul {
+	list-style-image: url(../img/puce-footer.gif);
+	list-style-position: inside;
+	line-height: 15px;
+	padding-bottom: 5px;
+}
+
+#big-footer a {
+	color: #fff;
+}
+
+p.maxlist-more a {
+	text-decoration: underline;
+}
+
+
+#big-footer a:hover, #big-footer a:active, #big-footer a:focus {
+	text-decoration: underline;
+}
+
+.texte-icone {
+	margin: 30px 0;
+}
+
+.texte-icone img {
+	float: left;
+	padding : 0 10px 10px 0;
+}
+
+
+/* --  Pied de page -- */
+
+#footer {
+	font-size: 11px;
+	color : #e2d2c0;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#footer a {
+	text-decoration: none;
+	color : #9f8a6f;
+}
+
+#footer a:hover, #footer a:focus, #footer a:active {
+	color: #614425;
+	text-decoration: underline;
+}
+
+
+
+

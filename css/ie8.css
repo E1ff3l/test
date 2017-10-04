@@ -1,0 +1,39 @@
+#logo {
+	float : left;
+}
+
+#header {
+	overflow: visible;
+	width : 940px;
+	height : 123px;
+}
+
+#main-form {
+	background: #000;
+}
+
+#liens-utiles li {
+	float: left;
+}
+
+#liens-utiles p {
+	padding right :  30px;
+}
+
+.annexe img {
+	padding: 3px 10px 16px 0;
+} 
+
+#entete-infos {
+	background: #000;
+}
+
+.ph-infos {
+	float: left;
+	width: 338px;
+}
+
+.ph-infos .thematiques-resto {
+	clear: both;
+	width: 330px;
+}

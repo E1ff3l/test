@@ -1,0 +1,608 @@
+/*
+ * Restomalin - 2013
+ *
+ * Design : Guillaume Schaeffer
+ * www.guillaume-schaeffer.fr
+ *
+ */
+
+
+#entete-resto {
+	position: relative;
+	height : 230px;
+}
+
+#entete-resto .logo-resto {
+	position: absolute;
+}
+
+#entete-infos p {
+	color: #fff;
+	margin: 0;
+}
+
+#entete-infos #thematiques-resto {
+	color: #bdbdbd;
+	line-height: 15px;
+}
+
+#entete-infos .ph-infos {
+	margin-left: 120px;
+}
+
+#entete-resto.africain { background: url(../img/entete/africain.jpg) no-repeat top left;}
+#entete-resto.apero { background: url(../img/entete/apero.jpg) no-repeat top left;}
+#entete-resto.asiatique { background: url(../img/entete/asiatique.jpg) no-repeat top left;}
+#entete-resto.burgers { background: url(../img/entete/burgers.jpg) no-repeat top left;}
+#entete-resto.chinois { background: url(../img/entete/chinois.jpg) no-repeat top left;}
+#entete-resto.couscous { background: url(../img/entete/couscous.jpg) no-repeat top left;}
+#entete-resto.creole { background: url(../img/entete/creole.jpg) no-repeat top left;}
+#entete-resto.crepes { background: url(../img/entete/crepes.jpg) no-repeat top left;}
+#entete-resto.fruits-de-mer { background: url(../img/entete/fruits-de-mer.jpg) no-repeat top left;}
+#entete-resto.indien { background: url(../img/entete/indien.jpg) no-repeat top left;}
+#entete-resto.italien { background: url(../img/entete/italien.jpg) no-repeat top left;}
+#entete-resto.japonais { background: url(../img/entete/japonais.jpg) no-repeat top left;}
+#entete-resto.kebabs { background: url(../img/entete/kebabs.jpg) no-repeat top left;}
+#entete-resto.libanais { background: url(../img/entete/libanais.jpg) no-repeat top left;}
+#entete-resto.paella { background: url(../img/entete/paella.jpg) no-repeat top left;}
+#entete-resto.paninis { background: url(../img/entete/paninis.jpg) no-repeat top left;}
+#entete-resto.pates { background: url(../img/entete/pates.jpg) no-repeat top left;}
+#entete-resto.pizza { background: url(../img/entete/pizza.jpg) no-repeat top left;}
+#entete-resto.poissons { background: url(../img/entete/poissons.jpg) no-repeat top left;}
+#entete-resto.poulets-rotis { background: url(../img/entete/poulets-rotis.jpg) no-repeat top left;}
+#entete-resto.salades { background: url(../img/entete/salades.jpg) no-repeat top left;}
+#entete-resto.sandwiches { background: url(../img/entete/sandwiches.jpg) no-repeat top left;}
+#entete-resto.tacos { background: url(../img/entete/tacos.jpg) no-repeat top left;}
+#entete-resto.tapas { background: url(../img/entete/tapas.jpg) no-repeat top left;}
+#entete-resto.flamenkuche { background: url(../img/entete/flamenkuche.jpg) no-repeat top left;}
+#entete-resto.tex-mex { background: url(../img/entete/tex-mex.jpg) no-repeat top left;}
+#entete-resto.thailandais { background: url(../img/entete/thailandais.jpg) no-repeat top left;}
+#entete-resto.viandes { background: url(../img/entete/viandes.jpg) no-repeat top left;}
+#entete-resto.vietnamien { background: url(../img/entete/vietnamien.jpg) no-repeat top left;}
+#entete-resto.wok { background: url(../img/entete/wok.jpg) no-repeat top left;}
+#entete-resto.oriental { background: url(../img/entete/oriental.jpg) no-repeat top left;}
+
+#new {
+	position: absolute;
+	top : 0;
+	right: 0;
+	height: 78px;
+	width: 79px;
+	background: url(../img/bandeau-nouveau.png) no-repeat top right;
+	margin-top : -2px;
+	margin-right: -3px;
+}
+
+#new span {
+	display: none;
+}
+
+p#ouverture, 
+#moyens-paiement {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	color: #fff;
+	padding: 2px 7px;
+	margin-top: 2px;
+}
+
+p#ouverture {
+		display: inline-block;
+}
+
+p#moyens-paiement {
+	padding:  0;
+	line-height: 20px;
+	margin-top : 3px;
+	width: 135px;
+
+}
+
+p#moyens-paiement a {
+	background: url(../img/moyens-paiement-couleur.gif) no-repeat top left;
+	padding: 0px 0 8px 35px;
+	display: block;
+	color: #fff;
+}
+
+#ouverture.ouvert {
+	background: #bac805;
+}
+
+#ouverture.ferme {
+	background: #df1818;
+}
+
+
+#ouverture.bientot {
+	background: #ffa200;
+}
+
+
+
+/* -- onglets principaux -- */
+
+li.onglet {
+	display: inline;
+}
+
+li.onglet a {
+	display: block;
+	float: left;
+	width: 115px;
+	padding: 6px 0 5px 0;
+	text-align: center;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+	background: url(../img/fond-onglet.gif) repeat-y top left #f4f3f0;
+	border-bottom: 1px solid #efebe7;
+	transition: background .3s, border .3s, color .7s, padding .2s;
+}
+
+li.ui-tabs-active a {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+
+li.onglet a:hover,
+li.onglet a:focus, 
+li.onglet a:active {
+	color: #3c3c3c;
+	text-shadow : 0 1px 1px rgba(0,0,0,.3);
+	padding: 5px 0 6px 0;
+
+}
+
+
+/* -- contenu onglets carte -- */ 
+
+.contenu-onglet .categories-plats {
+	list-style-image: none;
+	margin-bottom: 10px;
+}
+
+.contenu-onglet .categories-plats li {
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 13px;
+	color: #a8a8a8;
+	padding: 2px;
+}
+
+.contenu-onglet .categories-plats li.actif {
+	background: #f8f9e5; 
+	color: #bac805;
+	padding: 2px 4px;
+}
+
+.contenu-onglet .categories-plats a {
+	color: #a8a8a8;
+	font-weight: 300;
+}
+
+p.commentaire {
+	clear: both;
+	color: #a8a8a8;
+	font-size: 12px;
+}
+
+#commentaire-haut {
+	border-bottom: 1px solid #efebe7;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}	
+
+#commentaire-bas {
+	border-top: 1px solid #efebe7;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.plat {
+	clear: both;
+	position: relative;
+	padding: 0px 2px;
+	margin-bottom: 10px;
+	color: #a8a8a8;
+	border-radius: 5px;
+	border: 1px solid #BAC805;
+}
+
+.plat h2 {
+	font-size: 16px;
+	background: #f8f9e5;
+	padding: 5px;
+	color: #3c3c3c;
+}
+
+.plat h4 {
+	font-family: "Trebuchet MS", Myriad, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-transform: none;
+	line-height: 20px;
+	margin-top: 10px;
+}
+
+#col-centrale p.prix {
+	text-align: right;
+	position: relative;
+	padding-right: 10px;
+	top: -35px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #bac906;
+}
+
+.prix span {
+	font-size: 12px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.plat form {
+	position: relative;
+	/*top : -20px;*/
+}
+
+form.no-options .ingredients, 
+div.no-options .ingredients  {
+	min-height: 40px;
+	padding-bottom: 10px;
+}
+
+.ingredients img {
+	float: left;
+	padding: 0 10px 10px 0;
+}
+
+.plat label {
+	line-height: 20px;
+}
+
+/*.plat .options {
+	position: relative;
+	margin-left: 110px;
+	width: 330px;
+	min-height: 40px;
+	padding-bottom: 10px;
+	overflow: auto;
+}*/
+
+
+/*.plat .column {
+	width: 140px;
+	float: left;
+	margin-right : 20px;
+}*/
+
+.plat .options {
+    position: relative;
+    min-height: 40px;
+    padding-bottom: 10px;
+    overflow: auto;
+    clear :both;
+}
+
+.question {
+
+    font-family: "Trebuchet MS",Myriad,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+   	font-size: 13px;
+    text-transform: none;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #3c3c3c;
+	
+}
+
+.plat .column-2 {
+    width: 194px;
+    float: left;
+    margin-right : 20px;
+}
+
+.plat .column-3 {
+    width: 123px;
+    float: left;
+    margin-right : 20px;
+}
+
+/* -- avis -- */
+#avis p strong, #avis .date {
+	color: #888;
+}
+
+#avis p {
+	padding: 0;
+	
+}
+
+#avis .bloc-avis {
+	padding-bottom: 1em;
+	border-bottom: 1px solid #efebe7;
+}
+
+.bloc-avis>p {
+	margin-top : 1em;
+}
+
+.bloc-avis a {
+	display: inline-block;
+	padding-top: 1em;
+}
+
+div.bloc-reponses {
+	background: #efebe7;
+	padding: 0.5em 1em .5em 0;
+}
+
+div.reponse {
+	padding-left : 1em;
+}
+
+/* -- Panier latéral -- */
+a#lien-panier {
+	display: block;
+	position : fixed;
+	top : 50%;
+	right: 0;	
+	background: url(../img/bouton-panier-vertical.gif) no-repeat;
+	width: 29px;
+	height: 102px;
+	margin-top : -51px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transition : box-shadow .2s;
+}
+
+a#lien-panier:hover,
+a#lien-panier:focus,
+a#lien-panier:active {
+	box-shadow: 0 0 5px rgba(0,0,0,.4);
+}
+
+
+a#lien-panier span {
+	display: none;
+}
+
+#mini-panier {
+	background: url(../img/fond-top-mini-panier.gif) repeat-x #a28d71;
+	margin-bottom: 30px;
+	padding: 15px 10px 0 10px;
+}
+
+#mini-panier h2 {
+	background: #7a6549;
+	font-size: 18px;
+	color : #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	padding: 5px 10px 2px 10px;
+}
+.monpanier {
+	background: #7a6549;
+	font-size: 18px;
+	color : #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,.35);
+	padding: 5px 10px 2px 10px;
+    font-family: "Fjalla One",sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;		
+}
+
+#mini-panier h2 a {
+	color: #fff;
+}
+
+#mini-panier h2 a:hover:after {
+	content:" (Modifier)";
+	font-size: 12px;
+}
+
+
+#mini-panier dl {
+	color: #fff;
+}
+
+
+#mini-panier dd {
+	border-bottom: 1px dotted #d3bd9f;
+}
+
+#mini-panier dt {
+	background: #a28d71;
+	padding: 1px 0 1px 5px;
+	position: absolute;
+	bottom: -4px;
+	right: -1px;
+	z-index: 99;
+}
+
+#mini-panier dd span {
+	margin: 0;
+	position: relative;
+	top: 4px;
+	padding: 0 5px 0 0;
+	background: #a28d71;
+}
+
+#mini-panier dd a {
+	color: #fff;
+}
+
+#mini-panier a.supprimer {
+	display: inline-block;
+	padding-right: 5px;
+	position: relative;
+	top : 2px;
+}
+
+dl#total {
+	margin-top:	12px;
+	padding-top: 4px;
+	border-top: 1px solid #d3bd9f;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#btn-valider, .btn-valider {
+	margin: 20px 0 10px 0;
+	width: 190px;
+	background : url(../img/double-fleche.png) no-repeat 174px 8px #bac805;
+}
+
+#btn-valider:hover,
+#btn-valider:focus,
+.btn-valider:hover,
+.btn-valider:focus {
+	background: url(../img/double-fleche.png) no-repeat 174px 8px #ccdb02;
+}
+
+.btn-valider:active,
+#btn-valider:active {
+	background: url(../img/double-fleche.png) no-repeat 174px 8px #92aa03;
+}
+
+#mini-panier ul {
+	list-style-type: none;
+}
+
+#mini-panier li {
+	color : #42382a
+}
+
+
+#mini-panier p {
+	padding-top: 10px;
+	color : #42382a
+}
+
+#mini-panier #bottom-panier {
+	height: 10px;
+	background: url(../img/fond-bottom-mini-panier.gif) repeat-x #a28d71;
+	margin: 0 -10px;
+}
+
+
+/* -- carroussel-thématiques -- */
+
+#autres-thematiques {
+	margin-top: -20px; 
+}
+
+#slider-thematiques { 
+	width: 220px;
+	height: 180px;
+	list-style: none;
+}
+
+/* images with caption */
+#slider-thematiques img {
+	width: 100%;
+	z-index: 100;
+	border-top-left-radius: 10px;
+}
+
+/* position the panels so the captions appear correctly */
+#slider-thematiques .panel { 
+	position: relative; 
+}
+
+#slider-thematiques .caption-bottom {
+	left: 0;
+	bottom: 0;
+	width: 210px;
+	height: 23px;
+}
+
+
+/* captions */
+#slider-thematiques .caption-bottom {
+	background: url(../img/fond-selection-zoom.gif) repeat-x bottom #bac906;
+	border-bottom: 1px solid #8da502;
+	color: #fff;
+	padding: 36px 0 0 10px;
+	margin: 0;
+	z-index: 10;
+	bottom: 0;
+	position: absolute;
+}
+
+
+/*
+#slider-thematiques h3 {
+	font-family: "Fjalla One", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+	line-height: 0;
+	color: #fff;
+}
+*/
+
+p.slider-theme {
+		font-family: "Fjalla One", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+	line-height: 0;
+	color: #fff;
+	
+}	
+
+#slider-title {
+	position: relative;
+	font-family: "Trebuchet MS", Myriad, Helvetica, Arial, sans-serif;
+	text-transform: none;
+	font-weight: 300;
+	text-shadow : 0 1px 1px rgba(0,0,0,.4);
+	color: #fff;
+	/*letter-spacing: -.3px;*/
+	top: 140px;
+	z-index: 100;
+	margin: 0 0 0 10px;
+}
+
+/* ---- Liste des restaurants ---- */
+#col-droite .zone-texte {
+	clear: 			none;
+	float:			left;
+	width:			116px;
+	min-height: 	100px;
+	/*padding-left: 	50px;*/
+	border: 		0px solid blue;
+}
+
+#col-droite .zone-image {
+	clear: 			none;
+	float:			left;
+	width:			82px;
+	min-height: 	100px;
+	border: 		0px solid blue;
+}
+
+
+#col-droite .avis {
+	width:			60px;
+	height: 		12px;
+	padding-left: 	50px;
+	border: 		0px solid blue;
+}
+
+#col-droite .avis a {
+	color: 			#fc0;
+}
+
+#col-droite img.vignette {
+	float: 			right;
+	padding : 		3px 0 10px 10px;
+	border: 		0px solid green;
+}
